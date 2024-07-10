@@ -32,7 +32,7 @@
   become: true
   roles:
     - web_servers
- 
+
 - hosts: db_servers
   become: true
   roles:
