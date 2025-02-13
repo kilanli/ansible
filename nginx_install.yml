@@ -1,0 +1,16 @@
+---
+- name: nginx kurulumu ve çalıştırılması
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: nginx kurulumu
+      apt:
+        name: nginx
+        state: latest
+
+    - name: nginx çalıştırma
+      service:
+        name: nginx
+        state: started
+        enabled: yes
